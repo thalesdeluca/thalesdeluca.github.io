@@ -14,15 +14,15 @@
       <img src="./img//logo1.png"/>
       <div class="links">
           <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="#main">Home</a></li>
               <li><a href="#about">Sobre</a></li>
-              <li><a href="#">Projetos</a></li>
-              <li><a href="#">Contato</a></li>
+              <li><a href="#projects">Projetos</a></li>
+              <li><a href="#contact">Contato</a></li>
             </ul>
       </div>
     </div>
 
-    <div id="main">
+    <section id="main">
       <div class="demos">
         <div class="wrapper">
           <div class="slider">
@@ -37,14 +37,19 @@
       <div class="container">
         <div class="container links">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#main">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </div>
+        <div class="teste">
+          <img src="./img/smartphone-with-a-smile.svg"/>
+          <img src="./img/website.svg"/>
+          <img src="./img/gamepad.svg" alt=""/>
+        </div>
         <p class="intro">
-          Estudante de Engenharia de Software, amante de jogos e programação, com destaque para mobile. E sem mencionar uma boa música para acompanhar toda e qualquer atividade ^^.
+          Olá, sou desenvolvedor de aplicações para dispositivos móveis, websites e jogos. Seja muito bem vindo!
         </p>
         <a href="https://github.com/thalesdeluca">
           <div class="btn-container">
@@ -52,18 +57,65 @@
           </div>
         </a>
       </div>
-    </div>
+    </section>
 
     <section id="about">
       <div class="header">
         <h2>Sobre</h2>
       </div>
-      <div class="content">
-          
-        </div>
+      <div class="photo-card">
+          <img src="./img/photo.jpg" class="photo"/> 
+          <h3>Thales de Luca Vieira Corrêa</h3>
+          <ul>
+            <li>Idade: 19</li>
+            <li>Localidade: Cornélio Procópio - PR - Brasil</li>
+            <li>Estuda em: Universidade Tecnológica Federal do Paraná</li>
+            
+          </ul>
+      </div>
+      <p>
+          Estudante de Engenharia de Software, amante de jogos e programação, com destaque para mobile. E sem mencionar algumas músicas <em>"chill"</em> para acompanhar toda e qualquer atividade ^^.
+          <br/><br/>
+          Atualmente desenvolvendo projetos pessoais e aprofundando o conhecimento sobre Desenvolvimento FullStack.
+      </p>
+      <div id="skills">
+        <h3>Skillset</h3>
+        <table>
+          <tr>
+            <td>HTML</td>
+            <td>CSS</td>
+          </tr>
+          <tr>
+            <td>React-Native</td>
+            <td>Android</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>Javascript</td>
+          </tr>
+          <tr>
+            <td>Windows Forms</td>
+            <td>Arduino</td>
+          </tr>
+          <tr>
+            <td>Unity</td>
+          </tr>
+        </table>
+      </div>
+      
+    </section>
+
+    <section id="projects">
+      <div class="header">
+        <h2>Projetos</h2>
+      </div>
 
     </section>
-    
+    <section id="contact">
+      <div class="header">
+        <h2>Contato</h2>
+      </div>
+    </section>
     <footer></footer>
 
 </body>
@@ -71,7 +123,7 @@
   
     window.onscroll = function() {
       let windowWidth = window.innerWidth;
-      if(windowWidth > 650){
+      if(windowWidth > 800){
         let currentScrollPos = window.pageYOffset;
         if (currentScrollPos > 40 ) {
           document.getElementById("nav").style.top = "0";
@@ -82,5 +134,7 @@
         document.getElementById("nav").style.top = "0px";
       }
     }
+
+
 </script>
 </html>
