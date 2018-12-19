@@ -360,7 +360,8 @@ section h3{
     margin-left: 10px;
   }
   #about {
-    height: 170vh;
+    height: auto;
+    padding-bottom: 20px;
   }
   .photo-card {
     float: none;
@@ -368,6 +369,7 @@ section h3{
     height: auto;
     width: 50vw;
     margin: 0 auto;
+    padding: 10px;
   }
   #about p {
     float: none;
@@ -409,9 +411,14 @@ section h3{
     transform: skewY(-5deg); 
     box-shadow: 0px -6px 8px rgba(0,0,0,0.2);
   }
+  #main {
+    height: none;
+    width: 100%;
+  }
   .container {
     width: 100%;
-    height: 55vh;    
+    height: auto; 
+    padding-bottom: 20px;
   }
   .intro {
     text-align: center;
@@ -423,7 +430,7 @@ section h3{
     margin-top: 12%;
   }
   .demos {
-    width: 97vw;
+    width: 100vw;
     float: none;
     height: 45vh;
   }
@@ -437,7 +444,7 @@ section h3{
   }
   .links {
     width: 240px;
-    margin-right: 3%;
+    margin-right: 0;
     float: right;
   }
   .links ul li a{
