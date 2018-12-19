@@ -292,7 +292,9 @@ footer {
     height: 100%;
   }
   .links {
-    width: 250px;
+    width: 240px;
+    margin: 0;
+    float: right;
   }
   .links ul li a{
     margin-left: 10px;
@@ -310,6 +312,16 @@ footer {
   }
   .slider{
     transition-duration: 100s;
+  }
+}
+@media(max-width: 325px){
+  .links {
+    width: 200px;
+    margin: 0;
+    float: right;
+  }
+  .links ul li a{
+    margin-left: 5px;
   }
 }
 @keyframes slide {
