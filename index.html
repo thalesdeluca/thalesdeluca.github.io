@@ -3,22 +3,53 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Thales de Luca - Intro</title>
+  <title>Thales de Luca - Desenvolvimento de Softwares</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="src/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+  <script>
+  
+    window.onscroll = function() {
+      let windowWidth = window.innerWidth;
+      if(windowWidth > 900){
+        let currentScrollPos = window.pageYOffset;
+        if (currentScrollPos > 40) {
+          document.getElementById("nav").style.top = "0";
+        } else {
+          document.getElementById("nav").style.top = "-47px";
+        }
+      } else {
+        document.getElementById("nav").style.top = "0px";
+        document.getElementById("dropdown").style.display = "none";
+      }
+    }
+
+    function toogleMenu() {
+      let x = document.getElementById("dropdown");
+      if(x.style.display === "block") { 
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+
+</script>
 </head>
 <body>
     <div id="nav">
       <img src="./img//logo1.png"/>
-      <div class="links">
+      <a href="javascript:void(0);" id="menu" onclick="toogleMenu()">
+          <embed src="./img/menu.svg"/>
+        </a>
+      <div class="links" id="dropdown">
           <ul>
-              <li><a href="#main">Home</a></li>
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#projects">Projetos</a></li>
-              <li><a href="#contact">Contato</a></li>
-            </ul>
+            <li><a href="#main" onclick="toogleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toogleMenu()">Sobre</a></li>
+            <li><a href="#projects" onclick="toogleMenu()">Projetos</a></li>
+            <li><a href="#contact" onclick="toogleMenu()">Contato</a></li>
+          </ul>       
       </div>
     </div>
 
@@ -43,10 +74,10 @@
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </div>
-        <div class="teste">
-          <img src="./img/smartphone-with-a-smile.svg"/>
-          <img src="./img/website.svg"/>
-          <img src="./img/gamepad.svg" alt=""/>
+        <div class="platforms">
+          <embed src="./img/smartphone-with-a-smile.svg"/>
+          <embed src="./img/website.svg"/>
+          <embed src="./img/gamepad.svg"/>
         </div>
         <p class="intro">
           Olá, sou desenvolvedor de aplicações para dispositivos móveis, websites e jogos. Seja muito bem vindo!
@@ -109,7 +140,14 @@
       <div class="header">
         <h2>Projetos</h2>
       </div>
-
+      <div id="banners">
+          <img src="https://github.com/thalesdeluca/Vinchi/raw/master/assets/banner1.png"/>
+          <img src="https://github.com/thalesdeluca/Pesquisa_Satisfacao/raw/master/app/src/main/banner.png"/>
+      </div>
+      <div id="preview">
+        <img src="./img/ps.png"/>
+      </div>
+      
     </section>
     <section id="contact">
       <div class="header">
@@ -119,22 +157,5 @@
     <footer></footer>
 
 </body>
-<script>
-  
-    window.onscroll = function() {
-      let windowWidth = window.innerWidth;
-      if(windowWidth > 800){
-        let currentScrollPos = window.pageYOffset;
-        if (currentScrollPos > 40 ) {
-          document.getElementById("nav").style.top = "0";
-        } else {
-          document.getElementById("nav").style.top = "-47px";
-        }
-      } else {
-        document.getElementById("nav").style.top = "0px";
-      }
-    }
 
-
-</script>
 </html>
