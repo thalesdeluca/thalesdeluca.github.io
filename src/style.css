@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border:1px solid red;
 
 }
 html {
@@ -410,7 +409,7 @@ section h3{
 }
 
 #contact .content {
-  width: 30%;
+  width: fit-content;
   height: 30%;
   margin: 0 auto;
   display: flex;
