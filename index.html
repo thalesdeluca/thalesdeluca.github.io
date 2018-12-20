@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
   <script>
-  
+
     window.onscroll = function() {
       let windowWidth = window.innerWidth;
       if(windowWidth > 900){
@@ -26,14 +26,35 @@
     }
 
     function toogleMenu() {
-      let x = document.getElementById("dropdown");
-      if(x.style.display === "block") { 
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
+      if(window.innerWidth <= 900) {
+        let x = document.getElementById("dropdown");
+        if(x.style.display === "block") { 
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    }
+    window.onload = function() {
+      var project = document.getElementById("banners");
+      project.onclick = (e) => {
+        let index = Array.prototype.indexOf.call(project.children, e.srcElement);
+        switchProject(index);
+      }  
+    }
+    function switchProject(index) {
+      switch(index) {
+        case 0: {
+          let preview = document.getElementById("preview");
+
+          
+        }
       }
     }
 
+
+
+    
 
 </script>
 </head>
@@ -142,7 +163,7 @@
       </div>
       <div id="banners">
           <img src="https://github.com/thalesdeluca/Vinchi/raw/master/assets/banner1.png"/>
-          <img src="https://github.com/thalesdeluca/Pesquisa_Satisfacao/raw/master/app/src/main/banner.png"/>
+          <img src="https://github.com/thalesdeluca/Pesquisa_Satisfacao/raw/master/app/src/main/banner.png" />
       </div>
       <div id="preview">
         <img src="./img/ps.png"/>
