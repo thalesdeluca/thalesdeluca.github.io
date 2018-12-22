@@ -5,58 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Thales de Luca - Desenvolvimento de Softwares</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="src/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
-  <script>
-
-    window.onscroll = function() {
-      let windowWidth = window.innerWidth;
-      if(windowWidth > 900){
-        let currentScrollPos = window.pageYOffset;
-        if (currentScrollPos > 40) {
-          document.getElementById("nav").style.top = "0";
-        } else {
-          document.getElementById("nav").style.top = "-47px";
-        }
-      } else {
-        document.getElementById("nav").style.top = "0px";
-        document.getElementById("dropdown").style.display = "none";
-      }
-    }
-
-    function toogleMenu() {
-      if(window.innerWidth <= 900) {
-        let x = document.getElementById("dropdown");
-        if(x.style.display === "block") { 
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
-      }
-    }
-    window.onload = function() {
-      var project = document.getElementById("banners");
-      project.onclick = (e) => {
-        let index = Array.prototype.indexOf.call(project.children, e.srcElement);
-        switchProject(index);
-      }  
-    }
-    function switchProject(index) {
-      switch(index) {
-        case 0: {
-          let preview = document.getElementById("preview");
-
-          
-        }
-      }
-    }
-
-
-
-    
-
-</script>
+  
 </head>
 <body>
     <div id="nav">
@@ -166,7 +118,6 @@
           <img src="https://github.com/thalesdeluca/Pesquisa_Satisfacao/raw/master/app/src/main/banner.png" />
       </div>
       <div id="preview">
-        <img src="./img/ps.png"/>
       </div>
       
     </section>
@@ -184,7 +135,7 @@
       </div>
     </section>
     <footer></footer>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-
 * {
   padding: 0;
   margin: 0;
@@ -18,7 +17,7 @@ p {
 }
 
 body {
-  background: rgb(238, 238, 238);
+  background-color: rgb(238,238,238);
   font-family: "Roboto Slab", "serif";
 }
 
@@ -126,8 +125,7 @@ body {
 
 .white {
   width: 40%;
-  background: none;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(238,238,238);
   border: none;
   transform: skewX(-6deg);
   left: 90%;
@@ -145,6 +143,7 @@ body {
 .btn-label {
   font-size: 24px;
   color: #000;
+  
   text-align: center;
   letter-spacing: 3px;
   font-family: 'Staatliches', sans-serif; 
@@ -179,6 +178,7 @@ body {
   height: 100%;
   width: 0;
   position: absolute;
+
   top: 0;
   left: 0;
   background-color: #ffd600;
@@ -237,6 +237,7 @@ body {
 #main p {
   padding: 2vh 1vw;
 }
+
 .platforms {
   height: 10vw;
   width: auto;
@@ -258,7 +259,7 @@ body {
   position: relative;
   font-size: 32px;
   font-weight: 700;
-  padding-bottom: 20px;;
+  padding-bottom: 20px;
 }
 
 section {
@@ -360,22 +361,25 @@ section h3{
 #banners {
   width: 40%;
   height: auto;
-  float: right;
-  margin: 4% 5%; 
+  float: right; 
+  margin: 7% 0;
+  margin-right: 10%;
 }
 
 #preview {
-  height: 65%;
-  width: fit-content;
-  margin: 2% 5%; 
-  box-sizing: border-box;
+  height: 75%;
+  width: calc((72vh * 9) / 16);
   float: left;
+  margin: 4% 0;
+  margin-left: 10%;
+  overflow: hidden;
 }
 #preview img {
   border: 3px dashed gray;
   height: 100%;
   width: auto;
   margin: 0 auto;
+  transition: all 1.5s ease;
 }
 
 #banners img {
@@ -385,14 +389,16 @@ section h3{
   position: relative;
   display: block;
   transition: all 0.45s ease;
-  margin: 1.5vw 0;
+  margin: 15px auto;
 }
+
 #banners img:hover {
   opacity: 1;
   transform: scale(1.2);
   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
   transition: all 0.8s ease;
 }
+
 #menu {
   display: none;
   float: right;
@@ -424,11 +430,22 @@ section h3{
   width: fit-content;
   margin: 20% 20px;
 }
+#dropdown {
+  display: inline;
+}
+.print {
+  opacity: 0; 
+  transition: all 0.4s ease-out;
+}
+.print.next{
+  opacity: 1;
+  transition: all 0.4s ease-in;
+}
 
 
 
 /***************************************************/
-@media (max-width: 900px), (max-device-width: 900px){
+@media (max-width: 1024px), (max-device-width: 1024px), only screen and (max-width: 1024px){
   .divider {
     top: 90%;
     left: 0;
@@ -495,7 +512,7 @@ section h3{
     padding-bottom: 0;
   }
   #skills{
-    float:none;
+    float: none;
     margin-right: 4%;
     width: auto;
     height: auto;
@@ -505,7 +522,6 @@ section h3{
   }
   tr, td {
     float: left;
-    
   }
   table {
     padding-left: 5%;
@@ -550,8 +566,24 @@ section h3{
     display: block;
     text-align: center;
   }
-  
-
+  #banners {
+    width: fit-content;
+    height: 7%;
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+  }
+  #banners img {
+    margin: 0 10px;
+    float: left;
+    height: 100%;
+    width: auto;
+  }
+  #preview {
+    margin: 20px auto;
+    float: none;
+    display: block;
+  }
 }
 @media (max-width: 768px){
   .container.links {
@@ -617,23 +649,47 @@ section h3{
     transition-duration: 100s;
   }
   #banners {
+    width: fit-content;
+    height: 5%;
+    padding: 0;
     margin: 0 auto;
-    width: 100%;
+    float: none;
   }
   #banners img {
-    float: left; 
-    width: 40%;
-    margin: 0 20px;
+    margin: 0 10px;
+    float: left;
+    height: 100%;
+    width: auto;
   }
   #preview {
     margin: 20px auto;
-    display: flex;
-    align-self: center;
-    width: 100%;
+    float: none;
+    display: block;
+  }
+  #dropdown {
+    display: none;
   }
 
 }
-@media(max-width: 325px){
+@media (max-width: 375px){
+  #banners {
+    width: fit-content;
+    height: 4%;
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+  }
+  #banners img {
+    margin: 0 10px;
+    float: left;
+    height: 100%;
+    width: auto;
+  }
+  #preview {
+    float: none;
+    margin: 20px auto;
+    display: block;
+  }
 }
 @keyframes slide {
   0% {
