@@ -2,6 +2,7 @@ const PROJECT_PRINTS = [5, 8];
 let projctIdx = 0;
 
 window.onscroll = () => {
+  //navbar control
   let windowWidth = window.innerWidth;
   if (windowWidth > 1024) {
     let currentScrollPos = window.pageYOffset;
@@ -14,6 +15,40 @@ window.onscroll = () => {
   } else {
     document.getElementById("nav").style.top = "0px";
     document.getElementById("dropdown").style.display = "none";
+  }
+
+  //add animation when visible
+  let headers = document.getElementsByClassName("header");
+  for(let header of headers){
+    if(isVisible(header)) {
+      header.classList.add("appear-below");
+    }
+  }
+
+  let about = document.getElementById("about");
+  let skills = document.getElementById("skills");
+  let intro = about.getElementsByTagName("p").item(0);
+  let card = about.getElementsByClassName("photo-card").item(0);
+  if(isVisible(about.getElementsByClassName("header").item(0))){
+    skills.classList.add("appear-below");
+    card.classList.add("appear-right");
+    intro.classList.add("appear-left");
+  }
+
+  let projects = document.getElementById("projects");
+  let banners = document.getElementById("banners");
+  let preview = document.getElementById("preview")
+  if(isVisible(projects.getElementsByClassName("header").item(0))){
+    banners.classList.add("appear");
+    preview.classList.add("appear-left");
+  }
+
+  let contacts = document.getElementById("contact");
+  let info = contacts.getElementsByClassName("content");
+  for(let i of info){
+    if(isVisible(contacts.getElementsByClassName("header").item(0))){
+      i.classList.add("appear-below");
+    }
   }
 }
 window.onresize = () => {
@@ -107,4 +142,14 @@ function addPrints(preview, images) {
     preview.appendChild(print);
   }
   preview.firstChild.classList.add("next");
+}
+
+
+
+function isVisible(element) {
+  let rect = element.getBoundingClientRect();
+  let top = rect.top;
+  let bottom = rect.bottom;
+
+  return top >= 0 && bottom <= window.innerHeight;
 }

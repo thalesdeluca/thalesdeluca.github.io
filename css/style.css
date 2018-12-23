@@ -31,6 +31,9 @@ body {
   z-index: 10;
   top: -47px;
   transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
 }
 
 #nav img {
@@ -84,11 +87,18 @@ body {
   width: 100%;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
 }
 .links li a:hover:after {
   content: "";
   transform: scaleX(1);
   transition: all 0.45s ease-out;
+  -webkit-transition: all 0.45s ease-out;
+  -moz-transition: all 0.45s ease-out;
+  -o-transition: all 0.45s ease-out;
 }
 
 .demos {
@@ -157,6 +167,9 @@ body {
   border: 4px solid #ffd600;
   margin: 0 auto;
   transition: 0.7s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -o-transition: all 0.7s;
   overflow: auto;
   z-index: 2;
 }
@@ -184,11 +197,17 @@ body {
   background-color: #ffd600;
   z-index: -1;
   transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
 }
 
 .btn-container:hover:after {
   width: 100%;
   transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .wrapper {
@@ -227,6 +246,9 @@ body {
   background: #4068FF;
   color: white;
   transition: all 2s ease-in;
+  -webkit-transition: all 2s ease-in;
+  -moz-transition: all 2s ease-in;
+  -o-transition: all 2s ease-in;
 }
 
 #main{
@@ -244,12 +266,23 @@ body {
   margin: 20% auto;
   display: flex;
   align-items: center;
+  perspective: 400px;
+  
 }
 .platforms embed {
   position: relative;
   height: 100%;
   width: auto;
   margin: 0 auto;
+}
+.platforms embed:nth-child(1){
+  animation: 2s flips ease-out;
+}
+.platforms embed:nth-child(2){
+  animation: 2.5s flips ease-out;
+}
+.platforms embed:nth-child(3){
+  animation: 3s flips ease-out;
 }
 
 .header {
@@ -268,9 +301,11 @@ section {
   height: 100vh;
   width: 100%;
 }
+
 section:not(#main){
   padding: 20px;
 }
+
 .photo {
   border-radius: 50%;
   display: block;
@@ -342,9 +377,15 @@ section h3{
   padding: 10px;
   list-style: none;
   transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 #skills table tr td:hover {
   transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   background:rgba(255, 255, 255,0.4);
 }
 #projects {
@@ -380,6 +421,9 @@ section h3{
   width: auto;
   margin: 0 auto;
   transition: all 1.5s ease;
+  -webkit-transition: all 1.5s ease;
+  -moz-transition: all 1.5s ease;
+  -o-transition: all 1.5s ease;
 }
 
 #banners img {
@@ -389,6 +433,9 @@ section h3{
   position: relative;
   display: block;
   transition: all 0.45s ease;
+  -webkit-transition: all 0.45s ease;
+  -moz-transition: all 0.45s ease;
+  -o-transition: all 0.45s ease;
   margin: 15px auto;
 }
 
@@ -397,6 +444,9 @@ section h3{
   transform: scale(1.2);
   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
   transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
 }
 
 #menu {
@@ -433,13 +483,34 @@ section h3{
 #dropdown {
   display: inline;
 }
+
+/*Animation classes*/
 .print {
   opacity: 0; 
   transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
 }
 .print.next{
   opacity: 1;
   transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+}
+
+.appear{
+  animation: 1.5s appear ease;
+}
+.appear-below {
+  animation: 1.2s appear-from-below ease;
+}
+.appear-right {
+  animation: 2.3s appear-from-right ease;
+}
+.appear-left {
+  animation: 2s appear-from-left ease;
 }
 
 
@@ -647,6 +718,9 @@ section h3{
   }
   .slider{
     transition-duration: 100s;
+    -webkit-transition-duration: 100s;
+    -moz-transition-duration: 100s;
+    -o-transition-duration: 100s;
   }
   #banners {
     width: fit-content;
@@ -697,5 +771,63 @@ section h3{
   }
   100% {
     background-position: -1000% 0;
+  }
+}
+@keyframes appear-from-below {
+  0% {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes flips {
+  0%{
+    transform: rotateX(120deg);
+  }
+  30%{
+    transform: rotateX(-15deg);
+  }
+  50% {
+    transform: rotateX(10deg);
+  }
+  80%{
+    transform: rotateX(-5deg);
+  }
+  100%{
+    transform: rotateX(0);
+  }
+}
+
+@keyframes appear-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes appear-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
