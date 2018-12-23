@@ -443,6 +443,7 @@ section h3{
   opacity: 1;
   transform: scale(1.2);
   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
   transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
   -moz-transition: all 0.8s ease;
